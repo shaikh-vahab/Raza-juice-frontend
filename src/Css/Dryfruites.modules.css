@@ -1,0 +1,102 @@
+/* THis Is dryfruite card css */
+
+
+.card-dryfruite {
+  height: 300px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid gray;
+  /* justify-content: center; */
+  border-radius: 8px;
+  margin-left: 10px;
+  margin-top: 20px;
+
+}
+
+.card-dryfruite img {
+  width: 200px;
+  height: 170px;
+  border-radius: 10px;
+}
+
+.card-dryfruite h2 {
+  padding: 5px;
+}
+
+.card-dryfruite .para {
+  text-align: center;
+  padding: 0px 0px;
+
+}
+
+.card-dryfruite .byu-now {
+  margin-top: 10px;
+  height: 30px;
+  width: 150px;
+  background-color: rgb(50, 45, 45);
+  border: none;
+  border-radius: 3px;
+  color: aliceblue;
+  margin-bottom: 10px;
+
+}
+
+
+.card-dryfruite .Rs {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.card-dryfruite:hover {
+  box-shadow: 10px 50px 18px rgba(0, 0, 0, 0.1);
+}
+
+
+.main-Dry-card {
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: aqua; */
+}
+
+.Heading-dry {
+  font-weight: 200;
+  font-size: 4rem;
+  color: #111;
+  /* margin-top: 80px; */
+}
+
+@media (max-width: 768px) {
+
+  /* Mobile Styles */
+  .card-dryfruite {
+    width: 80%;
+   
+    /* Make cards full-width on mobile */
+    /* margin-left: 40px; */
+  }
+  .main-Dry-card  img{
+    margin-top: 10px;
+  }
+  .main-Dry-card {
+    flex-direction: column;
+    align-items: center;
+    /* Stack cards vertically on mobile */
+  }
+
+  .Heading-dry {
+    font-size: 2rem;
+    /* Adjust heading size for mobile */
+  }
+}
+
+@media (min-width: 768px) {
+  /* Laptop and Larger Screen Styles */
+  /* No specific changes needed here as base styles already work for laptops */
+  .main-Dry-card {
+   display: flex;
+   flex-wrap: wrap;
+    /* Stack cards vertically on mobile */
+  }
+}

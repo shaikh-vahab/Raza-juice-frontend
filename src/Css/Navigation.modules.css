@@ -1,0 +1,139 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+nav {
+    display: flex;
+    position: relative;
+    height: 70px;
+    width: 100%;
+    /* z-index: 9999; */
+    background-color: white;
+    border: 0.1px solid rgb(219, 217, 217);
+
+}
+
+
+
+nav .logo {
+    margin: 0px 70px 0px 40px;
+}
+
+.Home-ul {
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    gap: 40px;
+    list-style: none;
+    text-decoration: none;
+
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.Home-ul ul li {
+    text-decoration: none;
+    list-style: none;
+}
+
+
+
+nav .navLinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+nav .navLinks .Home-ul {
+
+    text-decoration: none;
+    color: #555;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+
+}
+
+.Home-ul :hover {
+    color: red;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+nav .menuBtn {
+    padding: 8px 20px;
+    color: black;
+    background: transparent;
+    border: 1px solid #333;
+    border-radius: 20px;
+    font-size: 16px;
+    /* margin-left: 200px; */
+    margin-left: 160px;
+
+
+    margin-top: 0px;
+}
+
+nav .menuBtn:hover {
+    color: #fff;
+    background: #222;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+ 
+
+@media only screen and (max-width:600px) {
+    nav {
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        background: transparent;
+        backdrop-filter: blur(20px);
+    
+    }
+
+
+    .logo {
+        padding-left: 80px;
+        padding-bottom: 15px;
+    }
+
+    nav .navLinks .Home-ul{
+        font-size: 11px;
+        margin-left: 5px;
+        
+    }
+    .menuBtn{
+        display: none;
+    }
+  
+}
+
+@media only screen and (min-width:600px) and (max-width:900px) {
+   
+    nav .navLinks .Home-ul{
+        font-size: 15px;
+ 
+        
+}
+    
+
+    .menuBtn{
+        display: none;
+    }
+
+
+}
+
+@media only screen and (min-width:900px) {
+    
+}

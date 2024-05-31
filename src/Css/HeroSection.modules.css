@@ -1,0 +1,39 @@
+/**********************************************************************************************************************/
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+.mainimg {
+  background-image: url('https://t4.ftcdn.net/jpg/03/09/02/19/360_F_309021984_5QaTW7s7dEnzoBcHj8hesNXI6lXcjWPe.jpg');
+  background-repeat: no-repeat;
+
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+ 
+  margin-bottom: 60px;
+ 
+}
+
+.OrderMenu{
+  padding: 8px 20px;
+  /* border-color: black; */
+  color: black;
+  background: transparent;
+  border: 1px solid #333;
+  border-radius: 20px;
+  font-size: 16px;
+ margin: 480px 500px;
+}
+
+.OrderMenu:hover{
+  color: #fff;
+  background: #222;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.Img-glass{
+  height: 700px;
+  margin-top: 20px;
+}
