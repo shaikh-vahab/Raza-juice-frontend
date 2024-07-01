@@ -1,7 +1,8 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
+
 nav {
     display: flex;
     position: relative;
@@ -16,7 +17,9 @@ nav {
 
 
 nav .logo {
-    margin: 0px 70px 0px 40px;
+    margin: -8px 70px 0px 40px;
+    /* box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); */
+
 }
 
 .Home-ul {
@@ -88,52 +91,88 @@ nav .menuBtn:hover {
     cursor: pointer;
 }
 
- 
+.fas-cross {
+    display: none;
+}
+
+.fas-menu {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 10%;
+}
+
+
 
 @media only screen and (max-width:600px) {
     nav {
-        height: 100px;
+        height: 70px;
         display: flex;
         flex-direction: column;
         gap: 24px;
-        background: transparent;
-        backdrop-filter: blur(20px);
-    
+        background-color: #fff;
+
     }
 
 
-    .logo {
-        padding-left: 80px;
-        padding-bottom: 15px;
+    nav .navLinks .Home-ul {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        box-shadow: -1px 0px 37px 0px rgba(152, 87, 191, 0.75);
+
+        position: fixed;
+        top: 0;
+        gap: 40px;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+
+
     }
 
-    nav .navLinks .Home-ul{
-        font-size: 11px;
-        margin-left: 5px;
-        
+    .fas-cross {
+        position: absolute;
+        top: 25px;
+
+        left: 70px;
+        cursor: pointer;
+
+
     }
-    .menuBtn{
+
+
+    .menuBtn {
         display: none;
     }
-  
+
+    .fas-cross {
+        display: block;
+        font-size: 25px;
+
+    }
+
+    .fas-menu {
+        display: block;
+        font-size: 25px;
+    }
+
 }
 
 @media only screen and (min-width:600px) and (max-width:900px) {
-   
-    nav .navLinks .Home-ul{
-        font-size: 15px;
- 
-        
-}
-    
 
-    .menuBtn{
+    nav .navLinks .Home-ul {
+        font-size: 15px;
+    }
+
+    .menuBtn {
         display: none;
     }
 
 
 }
 
-@media only screen and (min-width:900px) {
-    
-}
+@media only screen and (min-width:900px) {}

@@ -2,7 +2,7 @@
 
 
 .card-dryfruite {
-  height: 300px;
+  height: 310px;
   width: 200px;
   display: flex;
   flex-direction: column;
@@ -72,13 +72,15 @@
   /* Mobile Styles */
   .card-dryfruite {
     width: 80%;
-   
+
     /* Make cards full-width on mobile */
     /* margin-left: 40px; */
   }
-  .main-Dry-card  img{
-    margin-top: 10px;
+
+  .main-Dry-card img {
+    margin-top:5px;
   }
+
   .main-Dry-card {
     flex-direction: column;
     align-items: center;
@@ -89,14 +91,23 @@
     font-size: 2rem;
     /* Adjust heading size for mobile */
   }
+
+  .card-dryfruite .byu-now {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+ 
+  }
 }
 
 @media (min-width: 768px) {
+
   /* Laptop and Larger Screen Styles */
   /* No specific changes needed here as base styles already work for laptops */
   .main-Dry-card {
-   display: flex;
-   flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
     /* Stack cards vertically on mobile */
   }
 }

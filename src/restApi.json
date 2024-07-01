@@ -3,20 +3,20 @@
         {
             "id": 1,
             "image": "./team_member_1.png",
-            "name": "JOHNATHAN TYLER",
-            "designation": "Founder & Head Chef"
+            "name": "Salim Bagwan",
+            "designation": "Shop Owner"
         },
         {
             "id": 2,
             "image": "./team_member_2.png",
-            "name": "WADE WARREN",
-            "designation": "Sous Chef"
+            "name": "Sidik Bagwan",
+            "designation": "Shop Second Owner"
         },
         {
             "id": 3,
             "image": "./team_member_3.png",
-            "name": "JHON DOE",
-            "designation": "Fast Food Chef"
+            "name": "Aadil Bagwan",
+            "designation": "Fast Food Cheif"
         }
     ]
   

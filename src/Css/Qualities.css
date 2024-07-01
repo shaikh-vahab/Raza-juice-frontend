@@ -1,0 +1,51 @@
+.section {
+    margin-left: 120px;
+}
+
+@media only screen and (max-width:600px) {
+
+    .section{
+       display: none;
+    }
+
+}
+
+@media (max-width: 1520px) {
+    .qualities .container {
+      min-width: 100%;
+      padding: 30px 20px;
+    }
+  }
+  
+  @media (max-width: 1190px) {
+    .qualities .container .card .title {
+      font-size: 1.4rem;
+    }
+  }
+  
+  @media (max-width: 1080px) {
+    .qualities .container .card {
+      padding: 0 30px;
+    }
+  
+    .qualities .container {
+      padding: 0;
+    }
+  }
+  
+  @media (max-width: 635px) {
+    .qualities .container .card {
+      flex: none;
+      width: 400px;
+      padding: 0;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+  }
+  
+  @media (max-width: 485px) {
+    .qualities .container .card {
+      width: 100%;
+    }
+  }
+  

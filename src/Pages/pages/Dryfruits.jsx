@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../../Css/Dryfruites.modules.css';
 import AddCart from './AddToCart'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Dryfruits = () => {
     const [data, setData] = useState([]);
@@ -43,7 +44,9 @@ const Dryfruits = () => {
                         <h2>{element.DryFruitName}</h2>
                         <p>({element.Quantity})</p>
                         <p className='Rs'>Rs:- {element.Price} </p>
-                        <button className='byu-now' onClick={() => addToCart(element)}>Buy Now</button>
+                        {/* <button className='byu-now' onClick={() => addToCart(element)}>Buy Now</button> */}
+                     <Link to={'/MakeReservation'}>   <button className='byu-now'>Buy Now</button></Link>
+
                     </div>
                 ))}
             </div>

@@ -1,5 +1,8 @@
 import React from "react";
 import { team } from "../restApi.json";
+import "../Css/Team.css"
+
+
 const Team = () => {
   return (
     <section className="team" id="team">

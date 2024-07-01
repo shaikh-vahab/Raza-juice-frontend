@@ -6,11 +6,9 @@
 .mainimg {
   background-image: url('https://t4.ftcdn.net/jpg/03/09/02/19/360_F_309021984_5QaTW7s7dEnzoBcHj8hesNXI6lXcjWPe.jpg');
   background-repeat: no-repeat;
-
   height: 500px;
   width: 100%;
   background-size: cover;
- 
   margin-bottom: 60px;
  
 }
@@ -33,7 +31,20 @@
   cursor: pointer;
 }
 
-.Img-glass{
-  height: 700px;
-  margin-top: 20px;
+
+
+@media only screen and (max-width:600px) {
+.mainimg{
+ background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSyDTQyt3xguDxza7ln2DrSEq7cNXXZOOf9V6TutEQ0obC6BkNLU5QABclEm6qAVECs-g&usqp=CAU");
+}
+
+.OrderMenu{
+ margin: 480px 50px;
+ width: 300px;
+ /* padding: 8px 100px; */
+
+background-color: #f0b9b9;
+
+
+}
 }
