@@ -1,7 +1,7 @@
 // import React from "react";
 
 import { Link } from 'react-router-dom';
-import '../Css/HeroSection.modules.css'
+import '../Css/HeroSection.css'
 
 const Main = () => {
   return (

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../../Css/Dryfruites.modules.css';
+import '../../Css/Dryfruites.css';
 import AddCart from './AddToCart'
 import axios from 'axios';
 import { Link } from 'react-router-dom';

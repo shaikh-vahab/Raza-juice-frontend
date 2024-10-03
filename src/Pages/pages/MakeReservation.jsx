@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../Css/MakeReservation.modules.css';
+import '../../Css/MakeReservation.css';
 import Swal from 'sweetalert2';
 
 function MakeReservation() {

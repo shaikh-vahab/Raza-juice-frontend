@@ -47,6 +47,8 @@ const AddCart = () => {
                     </ul>
                 )}
             </div>
+
+            
         </div>
     );
 };

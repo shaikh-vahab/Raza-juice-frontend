@@ -3,7 +3,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from '/public/Raza.png'; // Ensure the correct path to the image
-import '../Css/Navigation.modules.css';
+import '../Css/Navigation.css';
 import Footer from "./Footer";
 
 const Navbar = () => {
