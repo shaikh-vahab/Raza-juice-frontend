@@ -39,7 +39,7 @@ const Dryfruits = () => {
 
             <div className="main-Dry-card">
                 {data.map((element) => (
-                    <div className="card-dryfruite" key={element.id}>
+                    <div className="card-dryfruite" key={element._id}>
                         <img src={element.Image} alt={"Not Found"} />
                         <h2>{element.DryFruitName}</h2>
                         <p>({element.Quantity})</p>

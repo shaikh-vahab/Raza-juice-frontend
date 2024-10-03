@@ -11,7 +11,7 @@ import MakeReservation from './Pages/pages/MakeReservation'
 import About from './Pages/pages/About'
 import AddCart from './Pages/pages/AddToCart';
 import Dryfruits from './Pages/pages/Dryfruits';
-import Juice from './components/Juice';
+import DisplayJuices from './components/Juice';
 import Footer from './components/Footer';
 
 
@@ -25,7 +25,7 @@ const App = () => {
       <Routes>
         
         <Route path="/" element={<Home />} />
-        <Route path="/Juice" element={<Juice />} />
+        <Route path="/Juice" element={<DisplayJuices />} />
         <Route path="/Dryfruits" element={<Dryfruits />} />
         <Route path="/Menus" element={<Menus />} />
         <Route path="/About" element={<About />} />
