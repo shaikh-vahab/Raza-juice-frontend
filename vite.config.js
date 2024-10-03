@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   server : {
     proxy : {
-      '/Raza' : "http://localhost:8080"
+      '/Raza' : "https://raza-juice-api.onrender.com/"
     }
   },
   plugins: [react()],

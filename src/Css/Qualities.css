@@ -1,51 +1,87 @@
-.section {
-    margin-left: 120px;
-}
-
-@media only screen and (max-width:600px) {
-
-    .section{
-       display: none;
-    }
-
-}
-
-@media (max-width: 1520px) {
-    .qualities .container {
-      min-width: 100%;
-      padding: 30px 20px;
+.carousel {
+    position: relative;
+    width: 100vw;
+    height: 300px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+  }
+  
+  .carousel-item img {
+    width: 21%;
+    margin-right: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 8px;
+  }
+  
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .carousel-control.prev {
+    left: 10px;
+  }
+  
+  .carousel-control.next {
+    right: 10px;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1200px) {
+    .carousel-item img {
+      width: 25%;
+      margin-right: 25px;
+      margin-left: 8px;
     }
   }
   
-  @media (max-width: 1190px) {
-    .qualities .container .card .title {
-      font-size: 1.4rem;
+  @media (max-width: 992px) {
+    .carousel-item img {
+      width: 30%;
+      margin-right: 20px;
+      margin-left: 6px;
     }
   }
   
-  @media (max-width: 1080px) {
-    .qualities .container .card {
-      padding: 0 30px;
-    }
-  
-    .qualities .container {
-      padding: 0;
+  @media (max-width: 768px) {
+    .carousel-item img {
+      width: 35%;
+      margin-right: 15px;
+      margin-left: 4px;
     }
   }
   
-  @media (max-width: 635px) {
-    .qualities .container .card {
-      flex: none;
-      width: 400px;
-      padding: 0;
-      margin: 0 auto;
-      margin-bottom: 40px;
+  @media (max-width: 576px) {
+    .carousel{
+        height: 400px;
+        width: 100%;
     }
-  }
-  
-  @media (max-width: 485px) {
-    .qualities .container .card {
-      width: 100%;
+    .carousel-item img {
+      width: 40%;
+      margin-right: 10px;
+      margin-left: 20px;
+    }
+    .carousel-control{
+      margin: auto;
     }
   }
   

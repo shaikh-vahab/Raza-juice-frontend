@@ -1,5 +1,5 @@
 import React from "react";
-import "../../Css/AboutUs.css"
+import "../../Css/AboutUs.css";
 
 const About = () => {
   return (
@@ -16,14 +16,13 @@ const About = () => {
               With the click of a button, we connect to a vast world of information, communication, and entertainment.
               From social media to online shopping, our virtual presence shapes how we interact and perceive the world.
               Despite its benefits, being online also raises concerns about privacy, security, and digital addiction.
-              Whether for work, leisure, or staying Sconnected with loved ones, being online has become an integral part of modern existence
+              Whether for work, leisure, or staying connected with loved ones, being online has become an integral part of modern existence.
             </p>
 
             <button>Explore More</button>
-
           </div>
           <div className="banner">
-            <img src="AboutUs-img.jpg" alt="about" />
+            <img src="AboutUs-img.jpg" alt="about" className="zoom-image" />
           </div>
         </div>
       </section>

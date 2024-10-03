@@ -4,13 +4,17 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import './App.css';
-import Juices from './Pages/pages/Juices';
+// import Juices from './Pages/pages/Juices';
 import Navbar from './components/Navbar';
 import Menus from './Pages/pages/Menus'
 import MakeReservation from './Pages/pages/MakeReservation'
 import About from './Pages/pages/About'
 import AddCart from './Pages/pages/AddToCart';
 import Dryfruits from './Pages/pages/Dryfruits';
+import Juice from './components/Juice';
+import Footer from './components/Footer';
+
+
 
 const App = () => {
   return (
@@ -21,7 +25,7 @@ const App = () => {
       <Routes>
         
         <Route path="/" element={<Home />} />
-        <Route path="/Juices" element={<Juices />} />
+        <Route path="/Juice" element={<Juice />} />
         <Route path="/Dryfruits" element={<Dryfruits />} />
         <Route path="/Menus" element={<Menus />} />
         <Route path="/About" element={<About />} />
@@ -29,6 +33,8 @@ const App = () => {
         <Route path="/AddCart" element={<AddCart />} />
 
       </Routes>
+      <Footer />
+
     </>
   );
 }

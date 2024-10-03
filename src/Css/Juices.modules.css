@@ -23,3 +23,37 @@
 }
 
 
+.Main-Menuback {
+  margin: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 290px;
+  height: 430px;
+  border: 1px solid black;
+  border-radius: 30px;
+  /* background-color: rgb(203, 206, 187); */
+}
+
+.imgsize {
+  margin-top: 20px;
+}
+
+@media only screen and (max-width:600px) {
+  .container h2 {
+      margin-left: 3px;
+      font-size: 40px;
+  }
+
+  p {
+      text-align: center;
+      margin-left: 20px;
+  }
+
+  .dishes_container {
+      justify-content: center;
+  }
+  
+
+
+}

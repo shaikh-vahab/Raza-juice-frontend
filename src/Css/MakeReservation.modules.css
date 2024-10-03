@@ -3,7 +3,7 @@
 .reservation {
   display: flex;
   min-height: 60vh;
-  padding: 30px 20px;
+  /* padding: 30px px; */
   justify-content: center;
   align-items: center;
   /* background: url(/reserve.svg); */
@@ -24,26 +24,18 @@
 }
 
 
-.Plus-btn {
-  margin: -40px 360px;
 
 
-}
-
-
-.Minus-btn {
-  margin: -30px 360px;
-
-}
 
 .reservation .container .banner .reservation_form_box {
   width: 450px;
   background: #fff;
-  height: 90%;
+  height: 75%;
   padding: 10px;
   box-shadow: -1px 0px 37px 0px rgba(152, 87, 191, 0.75);
   -webkit-box-shadow: -1px 0px 37px 0px rgba(152, 87, 191, 0.75);
   -moz-box-shadow: -1px 0px 37px 0px rgba(152, 87, 191, 0.75);
+  margin-top: 80px;
 }
 
 .reservation .container .banner .reservation_form_box form div {

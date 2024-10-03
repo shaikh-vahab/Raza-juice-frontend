@@ -6,7 +6,7 @@ const Footer = () => {
     <footer>
       <div className="container">
         <div className="banner">
-          <div className="left">Vahab_Kandhari</div>
+          <div className="left">Raza Juice Center  <p style={{fontSize:'small'}}> TQ. Naigaon Dist Nanded - 431709</p> </div>
           <div className="right">
             <p>Vahab_Kandhari</p>
             <p>Open: 10:00 Am - 11:00 PM</p>
@@ -15,9 +15,11 @@ const Footer = () => {
         <div className="banner">
           <div className="left">
             <p>Developed By Wahab_Dev</p>
+           <div> Search On Map <a href="">Click Here ---</a>  </div>
           </div>
           <div className="right">
-            <p>All Rights Reserved By ﷽.</p>
+            <p>All Rights Reserved By ﷽.</p> <br />
+            <p>Contact Us :- 9975054098</p>
           </div>
         </div>
       </div>

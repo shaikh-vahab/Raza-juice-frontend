@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
-
-import "../Css/menus.css"
+import '../Css/juices.modules.css'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-const Menu = () => {
+const Juice = () => {
   const [data, setData] = useState([])
 
   useEffect(() => {
@@ -13,7 +12,7 @@ const Menu = () => {
         setData(res.data)
         // console.log(res.data)
       }).catch(() => {
-        console.log('err on Getting juice data')
+        console.log('error Getting juice data')
       })
   }, [])
 
@@ -45,9 +44,8 @@ const Menu = () => {
         </div>
       </div>
 
-
     </>
   )
 }
 
-export default Menu
+export default Juice

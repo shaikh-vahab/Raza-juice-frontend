@@ -14,7 +14,7 @@ const Reservation = () => {
         </div>
         <div className="banner">
           <div className="reservation_form_box">
-            <h1>MAKE A O</h1>
+            <h1>MAKE A ORDER</h1>
             <p> Helpline Number <b>(+91) 9175237382</b> </p>  
            
             <form action="https://api.web3forms.com/submit" method="POST">

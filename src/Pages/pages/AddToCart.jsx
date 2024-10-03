@@ -1,79 +1,53 @@
-import React, { useEffect, useState } from 'react';
-import '../../Css/AddCart.css';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import React, { useState } from "react";
+import '../../Css/Cart.css'
 
-const AddCart = ({ cartItems }) => {
-    const [data, setData] = useState([]);
-    const [quantities, setQuantities] = useState({});
+const AddCart = () => {
+    const [cartItems, setCartItems] = useState([]);
 
-    useEffect(() => {
-        axios.get('/Raza/DryFruit').then((res) => {
-            setData(res.data);
-        }).catch((err) => {
-            console.log(`error occurred during Dryfruit data fetch`);
-        });
-    }, []);
 
-    useEffect(() => {
-        const initialQuantities = {};
-        cartItems.forEach(item => {
-            initialQuantities[item.id] = item.quantity || 1;
-        });
-        setQuantities(initialQuantities);
-    }, [cartItems]);
 
-    const navigate = useNavigate();
-
-    const increment = (id) => {
-        setQuantities(prevState => ({
-            ...prevState,
-            [id]: (prevState[id] || 0) + 1
-        }));
-    };
-
-    const decrement = (id) => {
-        if (quantities[id] > 1) {
-            setQuantities(prevState => ({
-                ...prevState,
-                [id]: (prevState[id] || 0) - 1
-            }));
+    // Function to add items to the cart
+    const addToCart = (juice) => {
+        const existingItem = cartItems.find((item) => item.id === juice.id);
+        if (existingItem) {
+            setCartItems(
+                cartItems.map((item) =>
+                    item.id === juice.id
+                        ? { ...item, quantity: item.quantity + 1 }
+                        : item
+                )
+            );
+        } else {
+            setCartItems([...cartItems, { ...juice, quantity: 1 }]);
         }
     };
 
-    const calculateTotalPrice = () => {
-        let totalPrice = 0;
-        cartItems.forEach(item => {
-            totalPrice += (item.Price * (quantities[item.id] || 1));
-        });
-        return totalPrice;
-    };
-
     return (
-        <>
-            {cartItems.map((item) => (
-                <div key={item.id} className="mainDIv">
-                    <div>
-                        <img className='CartImg' src={item.Image} alt={'Not Found'} />
-                    </div>
-                    <div className='Incre-Decre'>
-                        <button onClick={() => decrement(item.id)}>-</button>
-                        <h3>{quantities[item.id]}</h3>
-                        <button onClick={() => increment(item.id)}>+</button>
-                    </div>
-                    <div>
-                        <h2> ₹ {item.Price}</h2>
-                    </div>
-                    <div className='btns'>
-                        <button>Delete Item X</button>
-                        <button onClick={() => navigate('/Dryfruits')}>check Item 🔙</button>
-                    </div>
-                    <div>
-                        <h2>Total Price: ₹  {calculateTotalPrice()}</h2>
-                    </div>
-                </div>
-            ))}
-        </>
+        <div className="cart-container">
+            <h1 className="cart-title">Juice Center Menu</h1>
+
+            {/* Juice List */}
+        
+
+            {/* Cart Items */}
+            <div className="cart">
+                <h2 className="cart-heading">Cart</h2>
+                {cartItems.length === 0 ? (
+                    <p className="empty-cart">Your cart is empty</p>
+                ) : (
+                    <ul>
+                        {cartItems.map((item) => (
+                            <li key={item.id} className="cart-item">
+                                <span>{item.name}</span>
+                                <span>Quantity: {item.quantity}</span>
+                                <span>Total: Rs. {item.quantity * item.price}</span>
+                            </li>
+                        ))}
+                    <button>Place Order</button>
+                    </ul>
+                )}
+            </div>
+        </div>
     );
 };
 

@@ -1,19 +1,53 @@
-import React from 'react'
-import "../Css/Qualities.css"
+import React, { useState, useEffect } from 'react';
+import '../Css/Qualities.css';
+
+const images = [
+  'https://m.media-amazon.com/images/I/81iWJw+0pRL._AC_UF350,350_QL80_.jpg',
+  'https://m.media-amazon.com/images/I/71bTXkppP3L.jpg',
+  'https://m.media-amazon.com/images/I/71XtJk2uNzL.jpg'
+];
+
 const Qualities = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextImage = () => {
+    setCurrentIndex((currentIndex + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentIndex((currentIndex - 1 + images.length) % images.length);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextImage();
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval); // Clear interval on component unmount
+  }, [currentIndex]);
+
   return (
-    <>
-      <section className='section'>
-
-          <img src="https://media.istockphoto.com/id/1159751783/photo/organic-apricot-fruit-and-juice.jpg?s=612x612&w=0&k=20&c=_Y11iX3h0WOdEea0AYPihdBrd6gPXglDFJKkj4zEGew=" alt="Image 1" width={'150px'} />
-          <img src="Carousel-2.jpeg" alt="Image 2" width={'220px'} />
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgzHkIIA3nDmex7oPRSnb5X-I2bCEKeJWtXA&usqp=CAU" alt="Image 2" width={'300px'} />
-          <img src="Carousel-4.jpeg" alt="Image 4" width={'220px'} />
-          <img src="Carousel-3.jpeg" alt="Image 3" width={'150px'} />
-
-      </section>
-    </>
-  )
-}
+    <div className="carousel">
+      <div className="carousel-inner" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+        {images.map((image, index) => (
+          <div className="carousel-item" key={index}>
+            <img src={image} alt={`Slide ${index + 1}`} />
+            <img src={image} alt={`Slide ${index + 1}`} />
+            <img src={image} alt={`Slide ${index + 1}`} />
+            <img src={image} alt={`Slide ${index + 1}`} />
+          </div>
+        ))}
+      </div>
+      <button className="carousel-control prev" onClick={prevImage}>&#10094;</button>
+      <button className="carousel-control next" onClick={nextImage}>&#10095;</button>
+    </div>
+  );
+};
 
 export default Qualities;
+
+
+// export default Qualities;
+
+
+

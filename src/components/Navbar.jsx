@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from '/public/Raza.png'; // Ensure the correct path to the image
 import '../Css/Navigation.modules.css';
+import Footer from "./Footer";
 
 const Navbar = () => {
 
@@ -52,6 +53,7 @@ const Navbar = () => {
   };
 
   return (
+    <>
     <nav>
       <div className="logo">
         <Link to='/'>
@@ -61,7 +63,7 @@ const Navbar = () => {
       <div className='navLinks'>
         <ul className="Home-ul" id="sideMenu">
           <li><Link to="/">Home</Link></li>
-          <li><Link to='/Juices'>Juices</Link></li>
+          <li><Link to='/Juice'>Juices</Link></li>
           <li><Link to='/Dryfruits'>Dryfruits</Link></li>
           <li><Link to='/Menus'>Menus</Link></li>
           <li><Link to='/About'>About</Link></li>
@@ -73,7 +75,10 @@ const Navbar = () => {
           <button className="menuBtn">OUR CART <sup className="sup">1</sup></button>
         </Link>
       </div>
+
     </nav>
+   
+  </>
   );
 };
 

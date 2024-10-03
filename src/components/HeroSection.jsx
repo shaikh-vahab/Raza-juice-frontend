@@ -8,7 +8,7 @@ const Main = () => {
     <>
       <header>
         <div className="mainimg">
-          <Link to={'/Juices'}><button className="OrderMenu">Order Your Favourite Juice  🔎</button></Link>
+          <Link to={'/Juice'}><button className="OrderMenu">Order Your Favourite Juice  🔎</button></Link>
         </div>
       </header>
     </>
